@@ -36,3 +36,5 @@ pkg
 *.tmproj
 tmtags
 
+# For RubyMine
+.idea
