@@ -1,4 +1,4 @@
-require './lib/google_ajax_crawler'
+require 'lib/google_ajax_crawler'
 Gem::Specification.new do |s|
   s.name        = 'parklet_google_ajax_crawler'
   s.version     = GoogleAjaxCrawler.version
