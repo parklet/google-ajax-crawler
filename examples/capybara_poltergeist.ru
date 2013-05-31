@@ -1,13 +1,13 @@
 #
 # to run:
-# $ rackup examples/capybara_webkit.ru -p 3000
+# $ rackup examples/capybara_poltergeist.ru -p 3000
 # open browser to http://localhost:3000/#!test
 #
 require 'bundler/setup'
 require './lib/google_ajax_crawler'
 
 use GoogleAjaxCrawler::Crawler do |config|
-  config.driver        = GoogleAjaxCrawler::Drivers::CapybaraWebkit
+  config.driver        = GoogleAjaxCrawler::Drivers::CapybaraPoltergeist
   config.poll_interval = 0.25
   config.timeout       = 5
 

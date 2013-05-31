@@ -1,13 +1,13 @@
 require './spec/spec_helper'
 
-describe 'CapybaraWebkit driver' do
+describe 'CapybaraPoltergeist driver' do
   let(:host)           { "http://localhost:#{RackApp.port}/"}
   let(:browser_route)  { "#{host}#!test" }
   let(:snapshot_route) { "#{host}?_escaped_fragment_=test" }
 
   before(:all) do
     RackApp.configure_crawler do |config|
-      config.driver = GoogleAjaxCrawler::Drivers::CapybaraWebkit
+      config.driver = GoogleAjaxCrawler::Drivers::CapybaraPoltergeist
       config.poll_interval    = 0.25
       config.page_loaded_test = lambda {|driver| driver.page.evaluate_script('app.pageHasLoaded()') }
     end

@@ -10,7 +10,7 @@ describe GoogleAjaxCrawler::Options do
       options.requested_route_key.should  == '_escaped_fragment_'
       options.response_headers.should     == { 'Content-Type' => 'text/html' }
       options.poll_interval.should        == 0.5
-      options.driver.should be_a(GoogleAjaxCrawler::Drivers::CapybaraWebkit)
+      options.driver.should be_a(GoogleAjaxCrawler::Drivers::CapybaraPoltergeist)
       options.page_loaded_test.should be_nil
     end
 
