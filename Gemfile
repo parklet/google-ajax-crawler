@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'capybara-webkit', '>= 0.10.0'
+gem 'poltergeist'
 gem 'rack'
 
 group :development, :test do

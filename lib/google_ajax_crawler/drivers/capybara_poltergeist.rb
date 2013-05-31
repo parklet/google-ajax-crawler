@@ -1,10 +1,10 @@
 require "capybara"
 require "capybara/dsl"
-require "capybara-webkit"
+require "capybara/poltergeist"
 
 module GoogleAjaxCrawler
   module Drivers
-    class CapybaraWebkit < Driver
+    class CapybaraPoltergeist < Driver
       include Capybara::DSL
 
       def initialize *args
@@ -20,7 +20,7 @@ module GoogleAjaxCrawler
 
       def configure
         Capybara.run_server     = false
-        Capybara.current_driver = :webkit
+        Capybara.current_driver = :poltergeist
         Capybara.default_wait_time = options.timeout
       end
     end
